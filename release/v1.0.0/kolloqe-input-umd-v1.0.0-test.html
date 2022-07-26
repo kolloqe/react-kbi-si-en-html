@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <title>Kolloqe | Keyboard Input</title>
+</head>
+
+<body>
+  <h2>HTML Forms</h2>
+
+<form action="/action_page.php">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="John"><br>
+  <label for="lname">Last name:</label><br>
+  <div id="testid"></div><br><br>
+  <input type="submit" value="Submit">
+</form> 
+
+<p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+
+
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <script>
+    window.input_id = "testid";
+    window.kolloqeProps = {
+      testid: {
+        interface: "textfield",
+        id: undefined,
+        name: undefined,
+        type: undefined,
+        variant: "filled",
+        inputProps: {},
+        margin: "none",
+        required: false,
+        value: "",
+        defaultValue: undefined,
+        placeholder: "Type something...",
+        className: "w-100",
+        autoFocus: true,
+        size: "small",
+        color: "primary",
+        label: undefined,
+        hiddenLabel: true,
+        disableUnderline: true,
+        defaultLanguage: "en",
+        handleChange: undefined,
+        handleTextChange: undefined,
+        handleShortcut: undefined,
+        handleEnter: undefined,
+        enableShortcuts: true,
+        shortcutKey: 81,
+        error: false,
+        helperText: "",
+        disabled: false,
+        fullWidth: false
+      }
+    };
+
+    !(function () {
+      let e = document.createElement("script"),
+        t = document.head || document.getElementsByTagName("head")[0];
+      (e.src = "kolloqe-input-umd-v1.0.0.js"),
+        (e.async = !0),
+        (e.onload = () => { }),
+        t.insertBefore(e, t.firstChild);
+    })();
+  </script>
+</body>
+
+</html>
