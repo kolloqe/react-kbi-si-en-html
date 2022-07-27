@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <title>Kolloqe | Keyboard Input</title>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="kolloqeKeyboardInput"></div>
+  <script>
+    // set required window vars to be passed as props
+    window.input_id = "kolloqeKeyboardInput";
+    window.kolloqeProps = {
+      kolloqeKeyboardInput: {
+        interface: "textfield",
+        id: undefined,
+        name: undefined,
+        type: undefined,
+        variant: "filled",
+        inputProps: {},
+        margin: "none",
+        required: false,
+        value: "",
+        defaultValue: undefined,
+        placeholder: "Type here...",
+        className: "w-100",
+        autoFocus: true,
+        size: "small",
+        color: "primary",
+        label: undefined,
+        hiddenLabel: true,
+        disableUnderline: true,
+        defaultLanguage: "en",
+        handleChange: undefined,
+        handleTextChange: undefined,
+        handleShortcut: undefined,
+        handleEnter: undefined,
+        enableShortcuts: true,
+        shortcutKey: 81,
+        error: false,
+        helperText: "",
+        disabled: false,
+        fullWidth: false
+      }
+    }
+  </script>
+</body>
+
+</html>
