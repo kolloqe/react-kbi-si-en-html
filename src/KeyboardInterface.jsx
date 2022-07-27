@@ -152,27 +152,27 @@ export default class KeyboardInput extends Component {
           shortcutKeyStore: {},
         });
       }
-    }
 
-    if (17 in this.state.shortcutKeyStore && Number(this.props.shortcutKey) in this.state.shortcutKeyStore) {
-      if (shortcutKeyHandler !== null && shortcutKeyHandler !== undefined) {
-        if (this.state.language === "si") {
-          shortcutKeyHandler("en");
+      if (17 in this.state.shortcutKeyStore && Number(this.props.shortcutKey) in this.state.shortcutKeyStore) {
+        if (shortcutKeyHandler !== null && shortcutKeyHandler !== undefined) {
+          if (this.state.language === "si") {
+            shortcutKeyHandler("en");
+          } else {
+            shortcutKeyHandler("si");
+          }
         } else {
-          shortcutKeyHandler("si");
-        }
-      } else {
-        if (this.state.language === "si") {
-          this.setState({
-            outOfScopeText: "",
-            language: "en"
-          });
-        } else {
-          this.setState({
-            previousText: "",
-            outOfScopeText: this.state.text,
-            language: "si"
-          });
+          if (this.state.language === "si") {
+            this.setState({
+              outOfScopeText: "",
+              language: "en"
+            });
+          } else {
+            this.setState({
+              previousText: "",
+              outOfScopeText: this.state.text,
+              language: "si"
+            });
+          }
         }
       }
     }
@@ -385,7 +385,7 @@ export default class KeyboardInput extends Component {
             onChange={(e) => { this.handleInputChange(e, this.props?.handleChange || null) }}
             onKeyDown={(e) => { this.handleInputKeyDown(e, this.props?.handleEnter || null, this.props?.handleShortcut || null) }}
             onKeyUp={(e) => { this.handleInputKeyUp(e) }}
-            onKeyPress={(e) => { this.handleInputKeyPress(e) }} 
+            onKeyPress={(e) => { this.handleInputKeyPress(e) }}
             disabled={this.props.disabled}
             required={this.props.required}
             fullWidth={this.props.fullWidth} />
@@ -449,7 +449,7 @@ KeyboardInput.propTypes = {
   error: PropTypes.bool,
   helperText: PropTypes.string,
   disabled: PropTypes.bool,
-  fullWidth:PropTypes.bool,
+  fullWidth: PropTypes.bool,
 };
 
 KeyboardInput.defaultProps = {
